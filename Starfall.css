@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --ink: #171433;
+    --muted: #716d86;
+    --cream: #f8f5ee;
+    --purple: #5b39ca;
+    --yellow: #f5dc51;
+    --line: #ded9eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--cream);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.site-header {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7vw;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+}
+
+.brand span span {
+    color: var(--purple);
+}
+
+.brand-mark {
+    color: var(--purple);
+    font-size: 25px;
+}
+
+.header-status,
+.eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.11em;
+}
+
+.header-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--muted);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #78c789;
+    box-shadow: 0 0 0 4px #e2f2e2;
+}
+
+main {
+    max-width: 1260px;
+    margin: auto;
+    padding: 0 6vw;
+}
+
+.hero {
+    min-height: 475px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.hero-copy {
+    z-index: 1;
+    padding: 55px 0;
+}
+
+.eyebrow {
+    margin: 0 0 18px;
+    color: var(--purple);
+    font-weight: 500;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -0.07em;
+}
+
+em {
+    color: var(--purple);
+    font-style: normal;
+}
+
+.hero-text {
+    margin-bottom: 33px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.primary-button {
+    display: inline-flex;
+    gap: 45px;
+    padding: 16px 18px;
+    color: white;
+    background: var(--purple);
+    font: 500 11px 'DM Mono', monospace;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.primary-button:hover {
+    background: #4326ad;
+}
+
+.primary-button span {
+    font-size: 18px;
+    line-height: 10px;
+}
+
+.hero-orbit {
+    position: relative;
+    width: 43%;
+    height: 340px;
+}
+
+.planet {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    display: grid;
+    width: 170px;
+    height: 170px;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--yellow);
+    background: linear-gradient(145deg, #9b7aef, #5c36c7);
+    box-shadow: 25px 25px 0 #e8e1fa;
+    font-size: 58px;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid #cfc5ec;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+.orbit-one {
+    top: 96px;
+    left: -12%;
+    width: 440px;
+    height: 150px;
+}
+
+.orbit-two {
+    top: 108px;
+    left: -5%;
+    width: 390px;
+    height: 130px;
+    transform: rotate(40deg);
+}
+
+.floating-star {
+    position: absolute;
+    color: var(--purple);
+    font-size: 28px;
+}
+
+.star-a {
+    top: 20px;
+    right: 18%;
+}
+
+.star-b {
+    bottom: 30px;
+    left: 5%;
+    color: var(--yellow);
+}
+
+.star-c {
+    top: 110px;
+    right: 0;
+    font-size: 35px;
+}
+
+.intro-section {
+    padding: 60px 0 110px;
+    border-top: 1px solid var(--line);
+}
+
+.intro-section h2 {
+    margin: 0;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -0.06em;
+}
+
+footer {
+    max-width: 1260px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 36px 6vw;
+    color: var(--muted);
+    font: 10px 'DM Mono', monospace;
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: auto;
+        padding: 35px 0 60px;
+    }
+
+    .hero-orbit {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-header {
+        padding: 0 20px;
+    }
+
+    .header-status {
+        display: none;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    footer {
+        display: block;
+        padding: 28px 20px;
+        line-height: 2;
+    }
+}
